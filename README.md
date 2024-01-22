@@ -44,7 +44,7 @@
      mv default.revealjs template.md
      ```
      
-   - Example: see `template.md` file of this repository
+   - Example: see [`template.md`](https://github.com/dajuno/pandoc-revealjs-mathjax/blob/main/template.md) file of this repository
 4. Set `mathjaxurl` in the header of the presentation markdown file:
   - `mathjaxurl: node_modules/mathjax/es5/tex-mml-chtml.js` for the local installation
   - `mathjaxurl:  /usr/share/mathjax/tex-mml-chtml.js` or similar for a (possible)
@@ -56,5 +56,5 @@
 Assuming, the `revealjs` and `node_modules` folders, pandoc template (modified `default.revealjs`, renamed `template.md`) and presentation markdown file (`pres.md`) are all located in the current path:
 
 ```shell
-pandoc -s --mathjax -i -t revealjs pres.md README.md --template=template.md -V center=false -V history=false -V revealjs-url=reveal.js-master -o pres.html
+pandoc -s --mathjax -i -t revealjs pres.md -template=template.md -V center=false -V history=false -V revealjs-url=reveal.js-master -o pres.html
 ```
