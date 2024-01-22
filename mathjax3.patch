@@ -1,0 +1,39 @@
+--- default.revealjs	2024-01-22 16:55:35.324825164 -0300
++++ default.revealjs_mathjax3	2024-01-22 16:57:47.608351952 -0300
+@@ -284,21 +284,13 @@
+         maxScale: $maxScale$,
+ $endif$
+ $if(mathjax)$
+-
+-        math: {
++        mathjax3: {
+           mathjax: '$mathjaxurl$',
+-          config: 'TeX-AMS_HTML-full',
+-          tex2jax: {
+-            inlineMath: [['\\(','\\)']],
+-            displayMath: [['\\[','\\]']],
+-            balanceBraces: true,
+-            processEscapes: false,
+-            processRefs: true,
+-            processEnvironments: true,
+-            preview: 'TeX',
+-            skipTags: ['script','noscript','style','textarea','pre','code'],
+-            ignoreClass: 'tex2jax_ignore',
+-            processClass: 'tex2jax_process'
++          tex: {
++            inlineMath: [[ '$$', '$$' ], [ '\\(', '\\)' ]]
++          },
++          options: {
++            skipHtmlTags: [ 'script', 'noscript', 'style', 'textarea', 'pre' ]
+           },
+         },
+ $endif$
+@@ -306,7 +298,7 @@
+         // reveal.js plugins
+         plugins: [
+ $if(mathjax)$
+-          RevealMath,
++          RevealMath.MathJax3,
+ $endif$
+           RevealNotes,
+           RevealSearch,
