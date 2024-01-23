@@ -56,5 +56,5 @@
 Assuming, the `revealjs` and `node_modules` folders, pandoc template (modified `default.revealjs`, renamed `template.md`) and presentation markdown file (`pres.md`) are all located in the current path:
 
 ```shell
-pandoc -s --mathjax -i -t revealjs pres.md -template=template.md -V center=false -V history=false -V revealjs-url=reveal.js-master -o pres.html
+pandoc -s --mathjax -i -t revealjs pres.md --template=template.md -V center=false -V history=false -V revealjs-url=reveal.js-master -o pres.html
 ```
