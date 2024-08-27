@@ -58,3 +58,12 @@ Assuming, the `revealjs` and `node_modules` folders, pandoc template (modified `
 ```shell
 pandoc -s --mathjax -i -t revealjs pres.md --template=template.md -V center=false -V history=false -V revealjs-url=reveal.js-master -o pres.html
 ```
+
+Alternatively, the
+[`Makefile`](https://github.com/dajuno/pandoc-revealjs-mathjax/blob/main/Makefile) can
+be used to invoke the pandoc command, via
+
+```shell
+make
+```
+It detects automatically, if a `template.md` file is present.
